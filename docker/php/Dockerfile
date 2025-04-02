@@ -79,30 +79,3 @@ RUN echo '#!/bin/bash' > /start.sh && \
 
 # Comando padrão ao iniciar o container
 CMD ["/start.sh"]
-
-
-
-
-
-
-
-# # Habilitar o repositório Remi PHP 7.4
-# RUN yum-config-manager --enable remi-php74
-#
-# # Instalar PHP 7.4 e extensões comuns
-# RUN yum -y install php php-cli php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json php-intl php-opcache
-#
-# # Limpar cache do yum para reduzir o tamanho da imagem
-# RUN yum clean all && rm -rf /var/cache/yum
-#
-# # Verificar versão do PHP instalada
-# RUN php -v
-#
-# # Configurar diretório de trabalho
-# WORKDIR /var/www/html
-#
-# # Porta padrão do PHP-FPM
-# EXPOSE 9000
-#
-# # Comando padrão ao iniciar o container
-# CMD ["php", "-a"]
